@@ -1,0 +1,75 @@
+{
+  "name": "Deadpool-X",
+  "description": "Deadpool X - Clean Fast WhatsApp Bot by Confronter 2026",
+  "repository": "https://github.com/confronter5/Deadpool-X",
+  "logo": "https://telegra.ph/file/f6230a0cb5b118fa01561.jpg",
+  "keywords": ["bot", "whatsapp", "baileys", "deadpool"],
+  "success_url": "/",
+  "stack": "heroku-22",
+  "env": {
+    "SESSION_ID": {
+      "description": "Paste your deadpool~ base64 session here (example: deadpool~eyJub2lzZUtleSI6...). Leave empty to scan QR",
+      "value": "",
+      "required": false
+    },
+    "OWNER_NUMBER": {
+      "description": "Your number with country code (e.g. 254796283064)",
+      "value": "254796283064",
+      "required": true
+    },
+    "OWNER_NAME": {
+      "description": "Owner name",
+      "value": "Confronter"
+    },
+    "BOT_NAME": {
+      "description": "Bot name",
+      "value": "DEADPOOL-X"
+    },
+    "AUTO_VIEW_STATUS": {
+      "description": "Auto view status (true/false)",
+      "value": "true"
+    },
+    "AUTO_LIKE_STATUS": {
+      "description": "Auto react status (true/false)",
+      "value": "true"
+    },
+    "AUTO_REACT": {
+      "description": "Auto react messages with random emojis (true/false)",
+      "value": "true"
+    },
+    "ANTI_DELETE": {
+      "description": "Anti delete messages (true/false)",
+      "value": "true"
+    },
+    "ANTI_EDIT": {
+      "description": "Anti edit messages (true/false)",
+      "value": "true"
+    },
+    "ANTI_VIEWONCE": {
+      "description": "Anti view once (true/false)",
+      "value": "true"
+    },
+    "ANTICALL": {
+      "description": "Block calls (true/false)",
+      "value": "false"
+    },
+    "PREFIX": {
+      "description": "Command prefix",
+      "value": "."
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
