@@ -16,7 +16,7 @@
   "author": "Confronter",
   "license": "MIT",
   "dependencies": {
-    "@whiskeysockets/baileys": "^6.7.16",
+    "@whiskeysockets/baileys": "6.7.16",
     "@hapi/boom": "^10.0.1",
     "pino": "^9.4.0",
     "chalk": "^4.1.2",
@@ -31,6 +31,9 @@
     "awesome-phonenumber": "^7.2.0",
     "jimp": "^0.22.12",
     "wa-sticker-formatter": "^4.4.4"
+  },
+  "overrides": {
+    "jimp": "^0.22.12"
   },
   "engines": {
     "node": ">=18"
